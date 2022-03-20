@@ -15,13 +15,23 @@ This is paired with Community Dancer UI which serves the same purpose (portfolio
 ### Express
 - Why: Express is by a wide margin (at time of writing) the most used API framework for nodeJS (including TS). 
 
+### TypeORM
+- Why: An ORM gives us a suite of tools to better write API code to interact with our DB. TypeORM is an easy to use ORM that allows us to almost entirely avoid writing out queries by hand and focus our learning on TS and less on SQL.  
+
 ## Development
-To run this project locally:
+
+### To run this project locally:
 - `npm i`
 - `npm run dev`
+
+### If you change an entity or otherwise want to generate a migration based on code changes:
+- `npm migrate --./src/migration/[YOUR MIGRATION NAME]`
+- Go to src/data-src.ts and add your generated migration class to the datasource's migration array.
+- Note: migrations run on server startup, so simply run `npm run dev` or any other server startup script to run your changes against the configured db.
 
 
 
 
 ## Sources
-Based loosely off of [Okta's article on Node-TS-Express api development](https://developer.okta.com/blog/2018/11/15/node-express-typescript). This does not include their use of dotenv, authorization, or ejs. We are using this to just get a quick rest api up and running. 
+- Boilerplate: Based loosely off of [Okta's article on Node-TS-Express api development](https://developer.okta.com/blog/2018/11/15/node-express-typescript). This does not include their use of dotenv, authorization, or ejs. We are using this to just get a quick rest api up and running. 
+- DB/TypeORM: Follows TypeORM's ['Get Started' instructions](https://typeorm.io/#/).
