@@ -8,3 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Changelog
 - ReadME
+
+## [0.0.0]
+### Added
+- Boilerplate express/ts
+- nodemon for re-launching server on save
+- lint job, tie it to local dev script (when we make changes, ensure they pass basic rules for writing code, this will make it easier to catch bugs/problems quickly and easily as well as make our code more consistent)
+- tools and run local instructions in readme
